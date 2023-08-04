@@ -1,0 +1,40 @@
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+:root {
+  background-color: #242424;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.onePostWrapper {
+  width: 80%;
+  min-height: 200px;
+  margin: 3rem 0;
+  padding: 10px 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 16px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(39, 41, 51);
+}
