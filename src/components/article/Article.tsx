@@ -17,10 +17,13 @@ const Article = ({ data, isArticleLoading }: iArticle) => {
 
     if (isArticleLoading) return <Spinner isLoading={isArticleLoading} override={override} />
 
+    // If the author had a different 'elementType', we could use map here and render it dynamically, for example in a switch case.
     return (
         <article className='article'>
             <h1 className='article__heading'>{heading?.value}</h1>
             {body.values?.length && body.values.map((value) => (
+                // Here I used "uuidv1", because even if we are currently not manipulating the DOM tree and a key is unnecessary, 
+                // there is a chance that we will be doing it at a later stage of the application.
                 <p key={uuidv1()} dangerouslySetInnerHTML={{ __html: value }} />
             ))}
             <img className='article__image' src={imageData.src} alt={imageData.alt} onError={handleError} />
